@@ -1,0 +1,65 @@
+# 5-3. Alien Colors #1: Imagine an alien was just shot down 
+# • If the alien is green, print a message that the player earned 5 points.
+# • If the alien is yellow, print a message that the player earned 10 points.
+# • If the alien is red, print a message that the player earned 15 points.
+
+
+# begin guessing game
+def guessing_game():
+    print("Welcome to the Guessing Game!")
+    print("Guess the color of the alien and win points")
+
+
+green = 5
+yellow = 10
+red = 15
+
+attempts = 0
+numbers = []
+
+while True:
+    guess = (input("Enter your guess (hint: it's a color): "))
+    attempts += 1
+
+    if guess == 'green':
+        print(f"player earned {green} points.:")
+        print(f"You have entered {attempts} attempts!")
+        numbers.append(f"{green}")
+        print(numbers)
+#        print(f"The sum of the numbers in the list {numbers} is: {total_sum}")
+
+    elif guess == 'yellow':
+        print(f"player earned {yellow} points.:")
+        print(f"You have entered {attempts} attempts!")
+        numbers.append(f"{yellow}")
+        print(numbers)
+    elif guess == 'red':
+        print(f"player earned {red} points")
+        print(f"You have entered {attempts} attempts!")
+        numbers.append(f"{red}")
+        print(numbers)
+    else:
+        print("Not the correct color of the alien")
+        print(f"You entered {attempts} attempts!")
+
+        break
+
+play_again = input("Do you want to play again? (yes/no): ").lower()
+if play_again == "yes":
+    guessing_game()
+else:
+    print("Thanks for playing!")
+
+# Start the game
+guessing_game()
+
+
+
+
+# def sum_of_list(numbers):
+#     total = 0
+#     for num in numbers:
+#         total += num
+#     return total
+# Example usage:
+# total_sum = sum_of_list(numbers)
